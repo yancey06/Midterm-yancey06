@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: purple;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 20px;
+            color: purple;
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            font-size: 18px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid purple;
+            border-radius: 5px;
+        }
+
+        button {
+            font-size: 24px;
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    
+
+        #backButton {
+            margin-top: 20px;
+            background-color: white;
+            color: purple;
+            border: 2px solid purple;
+        }
+
+        #backButton:hover {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm" onsubmit="return validateForm()">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <br>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+            <br>
+            <label>
+                <input type="checkbox" id="terms" required> I agree to the Terms & Conditions
+            </label>
+            <br>
+            <button type="submit">Sign Up</button>
+        </form>
+        <button id="backButton" onclick="location.href='index.html'">Back to Home</button>
+    </div>
+
+</body>
+</html>
+

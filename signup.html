@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: purple;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 20px;
+            color: purple;
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            font-size: 18px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid purple;
+            border-radius: 5px;
+        }
+
+        button {
+            font-size: 24px;
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a32cc4;
+        }
+
+        #backButton {
+            margin-top: 20px;
+            background-color: white;
+            color: purple;
+            border: 2px solid purple;
+        }
+
+        #backButton:hover {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form id="signinForm" onsubmit="return validateForm()">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <br>
+            <button type="submit">Sign In</button>
+        </form>
+        <button id="backButton" onclick="location.href='index.html'">Back to Home</button>
+    </div>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if (email === "" || password === "") {
+                alert("Please fill out all fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
